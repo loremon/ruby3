@@ -1,0 +1,33 @@
+<ul class="menu dropdown" data-dropdown-menu>
+	<li>
+		<a>Файл</a>
+		<ul class="menu">
+			<li><a href="/open">Открыть новый</a></li>
+			<li><a href="/edit">Открыть текущий</a></li>
+			<li><a onclick="saveText();">Сохранить</a></li>
+			<li><a href="/exit">Выйти</a></li>
+		</ul>
+	</li>
+	<li>
+		<a>Помощь</a>
+		<ul class="menu">
+			<li><a href="/about">О приложении</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="app-yield panel callout radius">
+	<form method="post" class="app-textarea">
+		<textarea name="text" onkeyup="changeStatus();" onchange="changeStatus();"><%= text %></textarea>
+		<input id="saveText" type="submit" hidden>
+	</form>
+	<div class="grid-container bottom panel callout radius">
+		<div class="grid-x grid-padding-x">
+			<div class="large-6 cell">
+				<p>Готов</p>
+			</div>
+			<div class="large-6 cell">
+				<p id="status">Сохранён</p>
+			</div>
+		</div>
+	</div>
+</div>

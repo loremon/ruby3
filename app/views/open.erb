@@ -1,0 +1,42 @@
+<ul class="menu dropdown" data-dropdown-menu>
+	<li>
+		<a>Файл</a>
+		<ul class="menu">
+			<li><a href="/open">Открыть новый</a></li>
+			<li><a href="/edit">Открыть текущий</a></li>
+			<li><a onclick="saveText();">Сохранить</a></li>
+			<li><a href="/exit">Выйти</a></li>
+		</ul>
+	</li>
+	<li>
+		<a>Помощь</a>
+		<ul class="menu">
+			<li><a href="/about">О приложении</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="app-yield panel callout radius">
+	<h2>Открытие файла</h2>
+	<form method="post" enctype="multipart/form-data">
+		<div class="grid-container">
+			<div class="row">
+				<label>Выберите файл для открытия или просто нажмите открыть для начала пустого документа</label>
+				<label for="textFile" class="button">Выбрать файл</label>
+				<input type="file" id="textFile" name="textFile" class="show-for-sr" accept=".txt" onchange="updateLoadingText();">
+			</div>
+			<div class="row">
+				<input type="submit" class="button" value="Открыть">
+			</div>
+		</div>
+	</form>
+	<div class="grid-container bottom panel callout radius">
+		<div class="grid-x grid-padding-x">
+			<div class="large-6 cell">
+				<p>Открываю...</p>
+			</div>
+			<div class="large-6 cell">
+				<p>Сохранён</p>
+			</div>
+		</div>
+	</div>
+</div>

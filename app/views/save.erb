@@ -1,0 +1,43 @@
+<ul class="menu dropdown" data-dropdown-menu>
+	<li>
+		<a>Файл</a>
+		<ul class="menu">
+			<li><a href="/open">Открыть новый</a></li>
+			<li><a href="/edit">Открыть текущий</a></li>
+			<li><a onclick="saveText();">Сохранить</a></li>
+			<li><a href="/exit">Выйти</a></li>
+		</ul>
+	</li>
+	<li>
+		<a>Помощь</a>
+		<ul class="menu">
+			<li><a href="/about">О приложении</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="app-yield panel callout radius">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
+				<h2>Загрузка файла</h2>
+			</div>
+		</div>
+		<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
+				<label>Документ был сохранён на сервере</label>
+				Введите имя файла: <input id="filename" placeholder="filename" onkeyup="changeDownloadName();" onchange="changeDownloadName();">
+				<a id="downloadButton" href="<%= href %>" class="button" download="data.txt">Cкачать</a>
+			</div>
+		</div>
+	</div>
+	<div class="grid-container bottom panel callout radius">
+		<div class="grid-x grid-padding-x">
+			<div class="large-6 cell">
+				<p>Сохраняю...</p>
+			</div>
+			<div class="large-6 cell rigth">
+				<p>Сохранён</p>
+			</div>
+		</div>
+	</div>
+</div>
