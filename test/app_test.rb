@@ -9,4 +9,9 @@ class AppTestCase < CapybaraTestCase
     visit('/')
     assert_text 'Текстовый редактор'
   end
+  
+  def test_about_page
+    visit('/about')
+    assert_text 'О приложении'
+  end
 end
