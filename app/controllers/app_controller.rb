@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'lib/saved_file'
+require_relative '../lib/saved_file'
 
 # Main controller.
 class AppController < Sinatra::Base
