@@ -6,9 +6,11 @@ class OpenController < AppController
   end
 
   post('/open') do
-    unless params['textFile'].nil?
+    if params['textFile'].nil?
+      redirect to('/open')
+    else
       settings.file.text = params['textFile']['tempfile'].read
+      redirect to('/edit')
     end
-    redirect to('/edit')
   end
 end

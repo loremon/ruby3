@@ -1,4 +1,15 @@
 $(document).foundation();
+var $dButton = $('#downloadButton');
+if ($dButton) {
+  $dButton.click(function() {
+    location.href = '/aftersave';
+  });
+}
+
+function updateLoadingText() {
+  $(".content").load("file.html");
+  $('#filename').html($('input[type=file]')[0].files[0].name);
+}
 
 function saveText() {
   var saveButton = $('#saveText');

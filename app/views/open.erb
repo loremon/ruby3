@@ -2,9 +2,9 @@
 	<li>
 		<a>Файл</a>
 		<ul class="menu">
-			<li><a href="/open">Открыть новый</a></li>
-			<li><a href="/edit">Открыть текущий</a></li>
-			<li><a onclick="saveText();">Сохранить</a></li>
+			<li><a href="/new">Создать</a></li>
+			<li><a href="/open">Открыть</a></li>
+			<li><a href="/edit">Продолжить редактирование</a></li>
 			<li><a href="/exit">Выйти</a></li>
 		</ul>
 	</li>
@@ -14,13 +14,16 @@
 			<li><a href="/about">О приложении</a></li>
 		</ul>
 	</li>
+	<li>
+		<a onclick="xxx();">ewfwef</a>
+	</li>
 </ul>
 <div class="app-yield panel callout radius">
 	<h2>Открытие файла</h2>
 	<form method="post" enctype="multipart/form-data">
 		<div class="grid-container">
 			<div class="row">
-				<label>Выберите файл для открытия или просто нажмите открыть для начала пустого документа</label>
+				<label id="filename"></label>
 				<label for="textFile" class="button">Выбрать файл</label>
 				<input type="file" id="textFile" name="textFile" class="show-for-sr" accept=".txt" onchange="updateLoadingText();">
 			</div>

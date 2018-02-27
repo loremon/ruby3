@@ -4,6 +4,7 @@ require_relative 'open_controller'
 require_relative 'edit_controller'
 require_relative 'about_controller'
 require_relative 'exit_controller'
+require_relative 'after_save_controller'
 
 class RootController < AppController
   use SaveController
@@ -11,6 +12,7 @@ class RootController < AppController
   use EditController
   use AboutController
   use ExitController
+  use AfterSaveController
 
   get('/') do
     erb :index

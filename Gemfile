@@ -28,3 +28,6 @@ gem "capybara", "~> 2.18"
 
 # Added at 2018-02-25 21:57:27 +0300 by Роман:
 gem "minitest", "~> 5.11"
+
+# Added at 2018-02-27 09:01:44 +0300 by Роман:
+gem "rspec", "~> 3.7"
