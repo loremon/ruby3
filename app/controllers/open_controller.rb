@@ -1,5 +1,6 @@
 require_relative 'app_controller'
 
+# /open href controller.
 class OpenController < AppController
   get('/open') do
     erb :open

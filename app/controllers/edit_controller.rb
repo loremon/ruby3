@@ -1,5 +1,6 @@
 require_relative 'app_controller'
 
+# /new and /edit href controller.
 class EditController < AppController
   get('/edit') do
     erb :edit, locals: { text: settings.file.text }

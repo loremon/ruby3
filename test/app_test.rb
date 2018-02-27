@@ -2,7 +2,9 @@ require_relative 'test_helper'
 require_relative '../app/controllers/app_controller'
 class AppTestCase < CapybaraTestCase
   def setup
-    Capybara.app = Rack::Builder.parse_file(File.expand_path('../../app/config.ru', __FILE__)).first
+    Capybara.app = Rack::Builder\
+                   .parse_file(File\
+                   .expand_path('../../app/config.ru', __FILE__)).first
   end
 
   def test_home_page
@@ -25,7 +27,7 @@ class AppTestCase < CapybaraTestCase
     assert_selector 'textarea'
   end
   
-  def test_edit_page
+  def test_new_page
     visit('/new')
     assert_selector 'textarea'
   end
@@ -65,9 +67,6 @@ class AppTestCase < CapybaraTestCase
   end
   
   def test_save_text
-    page.driver.post('/edit', { :params => { :text => 'test text' } })
-    
-    #print find('textarea').value
+    page.driver.post('/edit', params: { text: 'test text' })
   end
-    
 end

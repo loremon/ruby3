@@ -6,6 +6,7 @@ require_relative 'about_controller'
 require_relative 'exit_controller'
 require_relative 'after_save_controller'
 
+# Main routing controller.
 class RootController < AppController
   use SaveController
   use OpenController
