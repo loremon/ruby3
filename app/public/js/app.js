@@ -27,6 +27,5 @@ function changeDownloadName() {
 }
 
 function changeStatus() {
-  console.log('123');
   $('#status').html('Изменён');
 }
